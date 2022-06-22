@@ -2,15 +2,14 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import { Modal } from 'react-bootstrap';
 
-import Range from "../range/Range";
+import CardSimple from "../cardSimple/CardSimple";
+import CardCumulative from "../cardCumulative/CardCumulative";
+import CardRevision from "../cardRevision/CardRevision";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./mainSlider.css"
 
 import * as mockData from "../app/mock";
-import yes from "./images/yes.svg";
-import no from "./images/no.svg";
-import abstain from "./images/abstain.svg";
 
 const Slide = ({participant, question, total, onClick}) => (
     <div className="slide">
@@ -69,156 +68,6 @@ const Slide = ({participant, question, total, onClick}) => (
         </div>
     </div>
 );
-
-const CardSimple = ({question}) => {
-
-    const [isCollapsed, setIsCollapsed] = React.useState(false)
-
-    return (
-        <>
-            <div className="block-text-question">
-                {!isCollapsed ?
-                <div className="text-question">
-                    <h2>Избрание членов совета директоров</h2>
-                </div> : null}
-                <div className="block-btns-text">
-                    <div className="btn-text-question btn-translate-text-question">translate</div>
-                    <div className="btn-text-question btn-collapse-text-question"
-                         onClick={() => setIsCollapsed(prevState => !prevState)}></div>
-                </div>
-            </div>
-            <div className="vote-group-btn">
-                <div className="vote-btn yes-btn-vote-group">
-                    <img src={yes} alt="yes-img" /> за
-                </div>
-                <div className="vote-btn abstain-btn-vote-group">
-                    <img src={abstain} alt="yes-img" /> воздержался
-                </div>
-                <div className="vote-btn no-btn-vote-group">
-                    <img src={no} alt="yes-img" />против
-                </div>
-            </div>
-            <div className="footer-modal">
-                <div className="warning-text-footer-modal">
-                    Не все варианты выбраны, продолжить заполнение?
-                </div>
-                <div className="continue-btn-footer-modal">
-                    Продолжить
-                </div>
-                <div className="voting-btn-footer-modal">
-                    Проголосовать
-                </div>
-            </div>
-
-        </>
-    )}
-const CardRevision = ({question}) => {
-    return (
-        <div className="modal-body-revision">
-            <div className="block-text-question">
-                <div className="text-question">
-                    <h2>Избрание членов Ревизионной комиссии</h2>
-                </div>
-            </div>
-            <div className="block-list-voting-revision">
-                <div className="block-voting-revision">
-                    <div className="candidate-name">Кандидат Номер Раз</div>
-                    <div className="vote-group-btn">
-                        <div className="vote-btn yes-btn-vote-group">
-                            <img src={yes} alt="yes-img" /> за
-                        </div>
-                        <div className="vote-btn abstain-btn-vote-group">
-                            <img src={abstain} alt="yes-img" /> воздержался
-                        </div>
-                        <div className="vote-btn no-btn-vote-group">
-                            <img src={no} alt="yes-img" />против
-                        </div>
-                    </div>
-                </div>
-                <div className="block-voting-revision">
-                    <div className="candidate-name">Кандидат Номер Два</div>
-                    <div className="vote-group-btn">
-                        <div className="vote-btn yes-btn-vote-group">
-                            <img src={yes} alt="yes-img" /> за
-                        </div>
-                        <div className="vote-btn abstain-btn-vote-group">
-                            <img src={abstain} alt="yes-img" /> воздержался
-                        </div>
-                        <div className="vote-btn no-btn-vote-group">
-                            <img src={no} alt="yes-img" />против
-                        </div>
-                    </div>
-                </div>
-                <div className="block-voting-revision">
-                    <div className="candidate-name">Кандидат Номер Три</div>
-                    <div className="vote-group-btn">
-                        <div className="vote-btn yes-btn-vote-group">
-                            <img src={yes} alt="yes-img" /> за
-                        </div>
-                        <div className="vote-btn abstain-btn-vote-group">
-                            <img src={abstain} alt="yes-img" /> воздержался
-                        </div>
-                        <div className="vote-btn no-btn-vote-group">
-                            <img src={no} alt="yes-img" />против
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="footer-modal">
-                <div className="warning-text-footer-modal" style={{display: "none"}}>
-                    Не все варианты выбраны, продолжить заполнение?
-                </div>
-                <div className="continue-btn-footer-modal" style={{display: "none"}}>
-                    Продолжить
-                </div>
-                <div className="voting-btn-footer-modal">
-                    Проголосовать
-                </div>
-            </div>
-
-        </div>
-
-    )
-}
-const CardCumulative = ({question}) => {
-    return (
-        <div className="modal-body-cumulative">
-            <div className="block-text-question">
-                <div className="text-question">
-                    <h2>Избрание членов Совета директоров Куммулятивное голосование</h2>
-                </div>
-            </div>
-            <div className="block-list-voting-cumulative">
-                <div className="vote-group-btn-cumulative">
-                    <div className="vote-btn yes-btn-vote-group">
-                    </div>
-                    <div className="vote-btn abstain-btn-vote-group">
-                    </div>
-                    <div className="vote-btn no-btn-vote-group">
-                    </div>
-                </div>
-                <div className="number-of-shares">
-                    <div>Акций</div>
-                    <div>100</div>
-                </div>
-                <div className="block-voting-cumulative">
-                   <Range /><Range /><Range /><Range />
-                </div>
-                <div className="footer-modal">
-                    <div className="warning-text-footer-modal" style={{display: "none"}}>
-                        Не все варианты выбраны, продолжить заполнение?
-                    </div>
-                    <div className="continue-btn-footer-modal" style={{display: "none"}}>
-                        Продолжить
-                    </div>
-                    <div className="voting-btn-footer-modal">
-                        Проголосовать
-                    </div>
-                </div>
-            </div>
-        </div>
-    )
-}
 
 export default function MainSlider() {
     let settings = {
