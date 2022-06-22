@@ -21,17 +21,6 @@ export default function CardCumulative ({question}) {
                 <div className="block-voting-cumulative">
                     <Range /><Range /><Range /><Range />
                 </div>
-                <div className="footer-modal">
-                    <div className="warning-text-footer-modal" style={{display: "none"}}>
-                        Не все варианты выбраны, продолжить заполнение?
-                    </div>
-                    <div className="continue-btn-footer-modal" style={{display: "none"}}>
-                        Продолжить
-                    </div>
-                    <div className="voting-btn-footer-modal">
-                        Проголосовать
-                    </div>
-                </div>
             </div>
         </div>
     )

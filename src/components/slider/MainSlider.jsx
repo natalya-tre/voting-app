@@ -5,6 +5,8 @@ import { Modal } from 'react-bootstrap';
 import CardSimple from "../cardSimple/CardSimple";
 import CardCumulative from "../cardCumulative/CardCumulative";
 import CardRevision from "../cardRevision/CardRevision";
+import FooterSlider from "./FooterSlider";
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./mainSlider.css"
@@ -118,6 +120,7 @@ export default function MainSlider() {
                 </Modal.Header>
                 <Modal.Body>{renderCardType(currentQ)
                     }
+                    <FooterSlider />
                 </Modal.Body>
             </Modal>
         </>

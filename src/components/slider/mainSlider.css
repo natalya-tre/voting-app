@@ -236,7 +236,6 @@
 .modal-content {
   border-radius: 10px;
   border: none;
-  min-height: 300px;
 }
 .modal-body {
   border-radius: 0 0 10px 10px;
