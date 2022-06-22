@@ -1,25 +1,23 @@
 import React from "react";
 import VoteGroupBtn from "../voteGroupBtn/VoteGroupBtn";
+import QuestionText from '../cards/QuestionText';
 
 
-export default function CardSimple ({question}) {
+export default function CardSimple({ question }) {
 
     const [isCollapsed, setIsCollapsed] = React.useState(false)
-
     return (
         <>
-            <div className="block-text-question">
-                {!isCollapsed ?
-                    <div className="text-question">
-                        <h2>Избрание членов совета директоров</h2>
-                    </div> : null}
+            { !isCollapsed ? <QuestionText text={question.title} /> : null }
+            <div className="block-question-text">
                 <div className="block-btns-text">
-                    <div className="btn-text-question btn-translate-text-question">translate</div>
-                    <div className="btn-text-question btn-collapse-text-question"
-                         onClick={() => setIsCollapsed(prevState => !prevState)}></div>
+                    <div className="btn-question-text btn-translate-question-text">translate</div>
+                    <div className="btn-question-text btn-collapse-question-text"
+                         onClick={ () => setIsCollapsed(prevState => !prevState) }></div>
                 </div>
             </div>
-            <VoteGroupBtn />
+            <VoteGroupBtn/>
 
         </>
-    )};
+    )
+};

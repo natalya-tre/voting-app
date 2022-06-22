@@ -1,17 +1,16 @@
 import React from "react";
 import Range from "../range/Range";
 
-import "./cardCumulative.css"
 import VoteCumulativeGroupBtn from "./voteCumulativeGroupBtn";
+import QuestionText from '../cards/QuestionText';
+
+import "./cardCumulative.css"
 
 export default function CardCumulative ({question}) {
     return (
         <div className="modal-body-cumulative">
-            <div className="block-text-question">
-                <div className="text-question">
-                    <h2>Избрание членов Совета директоров Куммулятивное голосование</h2>
-                </div>
-            </div>
+            <QuestionText text={question.title}/>
+
             <div className="block-list-voting-cumulative">
                 <VoteCumulativeGroupBtn />
                 <div className="number-of-shares">

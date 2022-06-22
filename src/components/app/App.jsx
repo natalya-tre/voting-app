@@ -1,14 +1,14 @@
-
+import React from 'react';
+import MainSlider from '../slider/MainSlider';
 
 import './app.css'
-import PageSlider from "../pageSlider/PageSlider";
 
-function App() {
-    return (
-        <div className="app">
-            <PageSlider />
+export const App = () => (
+    <div className="app">
+        <div className="mainPage">
+            <MainSlider />
         </div>
-    )
-}
+    </div>
+)
 
 export default App;

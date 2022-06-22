@@ -1,15 +1,11 @@
 import React from "react";
 import VoteGroupBtn from "../voteGroupBtn/VoteGroupBtn";
-
+import QuestionText from '../cards/QuestionText';
 
 export default function CardRevision ({question}) {
     return (
         <div className="modal-body-revision">
-            <div className="block-text-question">
-                <div className="text-question">
-                    <h2>Избрание членов Ревизионной комиссии</h2>
-                </div>
-            </div>
+            <QuestionText text={question.title}/>
             <div className="block-list-voting-revision">
                 <div className="block-voting-revision">
                     <div className="candidate-name">Кандидат Номер Раз</div>

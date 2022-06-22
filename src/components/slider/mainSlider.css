@@ -241,12 +241,12 @@
   border-radius: 0 0 10px 10px;
   padding: 0;
 }
-.block-text-question {
+.block-question-text {
   background-color: #F2F5F8;
   padding: 16px 22px 20px 14px;
   position: relative;
 }
-.text-question {
+.question-text {
   min-height: 252px;
 }
 .block-btns-text {
@@ -257,12 +257,12 @@
   padding: 0;
   justify-content: space-between;
 }
-.btn-text-question {
+.btn-question-text {
   background: #D9D9D9;
   border-radius: 10px;
   cursor: pointer;
 }
-.btn-translate-text-question {
+.btn-translate-question-text {
   width: 122px;
   height: 36px;
   display: flex;
@@ -274,14 +274,14 @@
   line-height: 17px;
   color: #000000;
 }
-.btn-collapse-text-question {
+.btn-collapse-question-text {
   width: 36px;
   height: 36px;
   position: absolute;
   right: 0;
   bottom: -3px;
 }
-.text-question h2 {
+.question-text h2 {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
@@ -356,8 +356,8 @@
   border-radius: 0px 0px 0px 10px;
   border-right: 2px solid #A5A2A2;
 }
-.modal-body-revision .text-question,
-.modal-body-cumulative .text-question {
+.modal-body-revision .question-text,
+.modal-body-cumulative .question-text {
   min-height: 31px;
 }
 .block-list-voting-revision {
