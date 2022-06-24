@@ -1,6 +1,7 @@
 import React from "react";
+import CircularVotingResult from "../components/CircularVotingResult/CircularVotingResult";
 
-export const SlideInfo = ({ question, onClick }) => (
+export const SlideInfo = ({ question, answer, onClick }) => (
     <div className="slide_info">
         <div className="slide_info_text">
             <h3 className="mb-8">{ question.orderText }</h3>
@@ -19,7 +20,8 @@ export const SlideInfo = ({ question, onClick }) => (
                         <div className="link mb-8">Как проголосовать</div>
                     </div>
                 </div>
-                <div className="circle_slide_info"/>
+                {/*<div className="circle_slide_info"/>*/}
+                <CircularVotingResult answer={answer} />
             </div>
             <div className="voting-btn" onClick={ onClick }>
                 Проголосовать

@@ -1,0 +1,4 @@
+﻿import React from "react";
+
+export const CardUndefined = () => null;
+export default CardUndefined;

@@ -26,7 +26,7 @@ export const SlideHeader = ({ participant, question, total }) => (
             <div className="right_col_row_slider">
                 <div className="numbers">
                     <h2>Вопросы</h2>
-                    <p>{ question.order } <span className="of_the">из </span>{ total }</p>
+                    <p>{ question.id } <span className="of_the">из </span>{ total }</p>
                 </div>
             </div>
         </div>

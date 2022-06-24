@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import "./range.css"
 
-export default function Range() {
+export const Range = ({director, freePoints, onVote}) => {
     const [inputValue, setValue] = useState(0);
-    const onChange = (e) => setValue(e.target.value);
+    const onChange = (e) => {
+        setValue(e.target.value);
+        onVote(e.target.value);
+    }
+
     return (
         <>
-            <div className="candidate-name">Кандидат Номер Раз</div>
+            <div className="candidate-name">{ director.name }</div>
             <div className="range-container">
                 <div className="range-input">
                     <input
                         type="range"
-                        minValue="0"
-                        maxValue="999999"
+                        min="0"
+                        max={freePoints}
                         value={inputValue}
                         onChange={onChange}
                         className="slider"/>
@@ -21,7 +25,7 @@ export default function Range() {
                     <input
                         type="number"
                         min="0"
-                        max="999999"
+                        max={freePoints}
                         value={inputValue}
                         onChange={onChange}
                     />
@@ -31,3 +35,4 @@ export default function Range() {
 
     );
 };
+export default Range;
